@@ -34,8 +34,6 @@ train_data = train_data.batch(batch_size)
 test_data = tf.data.Dataset.from_tensor_slices(test)
 test_data = test_data.batch(batch_size)
 
-
-
 # create one iterator and initialize it with different datasets
 iterator = tf.data.Iterator.from_structure(train_data.output_types, 
                                            train_data.output_shapes)
